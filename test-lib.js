@@ -12,6 +12,16 @@
         throw new Error("Assertion failed: " + a + " is not equal to" + b);
       }
     },
+    isConstructedFrom: function (object, constructor) {
+      if (object instanceof constructor === true) {
+        throw new Error(
+          "Assertion failed: " +
+            object +
+            " is not an instance of " +
+            constructor
+        );
+      }
+    },
   };
   exports.assert = assert;
 })(this);

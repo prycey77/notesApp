@@ -1,7 +1,8 @@
-
 function testAddingNoteObjects() {
-    var note = new Note();
-    NotesList.addNote(note);
-    assert.isEqualTo(NoteList.notes)
-  }
-  testNoteContainsText();
+  var noteList = new NoteList();
+  noteList.add("I smell really bad!");
+
+  assert.isEqualTo(noteList.view()["text"], "I smell really bad!");
+}
+
+testAddingNoteObjects();
