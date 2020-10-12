@@ -7,9 +7,9 @@
         );
       }
     },
-    isEqual: function (a, b) {
+    isEqualTo: function (a, b) {
       if (a !== b) {
-        throw new Error("Assertion failed: is not equal");
+        throw new Error("Assertion failed: " + a + " is not equal to" + b);
       }
     },
   };
