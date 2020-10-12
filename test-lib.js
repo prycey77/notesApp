@@ -7,6 +7,11 @@
         );
       }
     },
+    isEqual: function (a, b) {
+      if (a !== b) {
+        throw new Error("Assertion failed: is not equal");
+      }
+    },
   };
   exports.assert = assert;
 })(this);

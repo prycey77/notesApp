@@ -1,9 +1,5 @@
-class note {
-
-    text(input) {
-        return "I smell bad!"
-    }
-
-    }
-    
-
+class Note {
+  text(input) {
+    return input;
+  }
+}
