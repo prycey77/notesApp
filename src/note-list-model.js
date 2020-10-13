@@ -3,8 +3,8 @@ class NoteList {
     this.noteList = [];
   }
 
-  view2() {
-    notes = this.noteList
+  view() {
+    var notes = this.noteList;
 
     for(var index = 0; index <= notes.length-1; index++) {
       return notes[index]
