@@ -1,7 +1,12 @@
-window.onload = function() {
+window.onload = function () {
+  var noteListVar = new NoteList();
 
-    var element = document.getElementById('app')
-    console.log(element)
-    element.innerHTML = 'howdy'
+  noteListVar.add("Favourite food: pesto");
+  noteListVar.add("Favourite drink: seltzer");
+  var noteListViewVar = new noteListView(noteListVar);
 
-}
+  var element = document.getElementById("app");
+  console.log(element);
+
+  element.innerHTML = noteListViewVar.output();
+};
