@@ -4,8 +4,6 @@ class NoteListViewTest {
 
     noteListVar.add("Favourite food: pesto");
     noteListVar.add("Favourite drink: seltzer");
-    // noteListVar.add("Favourite drink: tea");
-    // noteListVar.add("Favourite drink: beer");
     var noteListViewVar = new noteListView(noteListVar);
 
     assert.isTrue(
@@ -15,5 +13,4 @@ class NoteListViewTest {
     );
   }
 }
-// console.log(noteListViewVar.output())
 NoteListViewTest.testHtmlOutput();
