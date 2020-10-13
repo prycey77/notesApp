@@ -6,15 +6,17 @@ class noteListView {
     this.notelist = noteListVar
   }
 
-  // returnNoteList() {
-  //   return this.noteList.view()
-  // }
+  returnNoteList() {
+    return this.noteList.view()
+  }
 
   output() {
     var htmlString = "<ul>"
-    
-    var notes = this.notelist
 
+    var notes = this.returnNoteList()
+
+    console.log(notes)
+    
     for(var index = 0; index <= notes.length-1; index++) {
       htmlString += "<li><div>" + notes[index] + "</div></li>"
     }
