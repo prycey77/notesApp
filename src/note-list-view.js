@@ -1,29 +1,27 @@
 "use strict";
 
-class noteListView {  
-  
-  constructor(noteListVar) {  
-    this.notelist = noteListVar
+class noteListView {
+  constructor(noteListVar) {
+    this.noteList = noteListVar;
   }
 
   returnNoteList() {
-    return this.noteList.view()
+    return this.noteList.noteList;
   }
 
   output() {
-    var htmlString = "<ul>"
+    var htmlString = "<ul>";
 
-    var notes = this.returnNoteList()
+    var notes = this.returnNoteList();
+    var noteLength = notes.length;
 
-    console.log(notes)
-    
-    for(var index = 0; index <= notes.length-1; index++) {
-      htmlString += "<li><div>" + notes[index] + "</div></li>"
+    for (var index = 0; index < noteLength; index++) {
+      htmlString += "<li><div>" + notes[index] + "</div></li>";
     }
-    if(index == notes.length-1) 
-    { htmlString += "</ul>" }
+    if (index == noteLength) {
+      htmlString += "</ul>";
+    }
 
-    return htmlString
+    return htmlString;
   }
-
 }

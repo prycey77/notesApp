@@ -1,13 +1,12 @@
 class NoteListViewTest {
   static testHtmlOutput() {
-    
     var noteListVar = new NoteList();
+
     noteListVar.add("Favourite food: pesto");
     noteListVar.add("Favourite drink: seltzer");
-
-    var noteListViewVar = new noteListView(noteListVar)
-
-    console.log(noteListViewVar.output())
+    // noteListVar.add("Favourite drink: tea");
+    // noteListVar.add("Favourite drink: beer");
+    var noteListViewVar = new noteListView(noteListVar);
 
     assert.isTrue(
       "NoteListHtml outputs correctly",
@@ -16,5 +15,5 @@ class NoteListViewTest {
     );
   }
 }
-
-NoteListViewTest.testHtmlOutput()
+// console.log(noteListViewVar.output())
+NoteListViewTest.testHtmlOutput();
