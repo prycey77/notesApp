@@ -7,27 +7,24 @@ class noteController {
     this.notelistView = new noteListView(this.notelistModel)
   }
 
-  // view() {
-  //   window.onload = function () {
-  //     var element = document.getElementById("app");
+  view() {
+      var element = document.getElementById("app");
+      element.innerHTML = this.notelistView.output();
+    };
 
-  //     element.innerHTML = noteListViewVar.output();
-  //   };
+  // view() {
+  //   return this.notelistView.output()
   // }
 
-  view() {
-    return this.notelistView.output()
-  }
 
-
-  insertOnPage() {
-   var element = document.getElementById("app"); 
-   console.log(this)
-   element.innerHTML = this.view();
-  }
+  // insertOnPage() {
+  //  var element = document.getElementById("app"); 
+  //  console.log(this)
+  //  element.innerHTML = this.view();
+  // }
 }
 
 var listmodel = new NoteList();
 var controller = new noteController(listmodel);
-controller.insertOnPage();
+controller.view();
 
