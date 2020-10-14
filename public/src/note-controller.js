@@ -1,12 +1,25 @@
-window.onload = function () {
-  var noteListVar = new NoteList();
+class noteController {
+  // window.onload = function () {
 
-  noteListVar.add("Favourite food: pesto");
-  noteListVar.add("Favourite drink: seltzer");
-  var noteListViewVar = new noteListView(noteListVar);
+  constructor(noteListModel) {
+    this.noteListModel = noteListModel;
+  }
 
-  var element = document.getElementById("app");
-  console.log(element);
+  view() {
+    console.log("HELLO");
+    window.onload = function () {
+      var element = document.getElementById("app");
+      var element = document.getElementById("app");
 
-  element.innerHTML = noteListViewVar.output();
-};
+      element.innerHTML = noteListViewVar.output();
+    };
+  }
+}
+
+var noteListVar = new NoteList();
+noteListVar.add("Favourite food: Curry");
+noteListVar.add("Favourite drink: Petrol");
+var noteListViewVar = new noteListView(noteListVar);
+var test = new noteController(noteListViewVar);
+
+test.view();
