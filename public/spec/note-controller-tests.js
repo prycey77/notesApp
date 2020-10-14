@@ -13,6 +13,15 @@ class noteControllerTest {
       controller instanceof noteController
     );
   }
+
+  // static testView() {
+  //   var notelist = new NoteList();
+  //   notelist.add("This is a note");
+  //   var notecontroller = new noteController(notelist) 
+  //   notecontroller.insertOnPage();
+    // console.log(document.getElementById('app').innerHTML)
+    //asserts.isTrue(document.getElementById('app').innerHTML === )
+  }
   //static testInnerHtml() {
   // var double = new noteListDouble();
   //var controller = new noteController();
@@ -26,13 +35,13 @@ class noteControllerTest {
   // }
 }
 
-var noteListVar = new NoteList();
-noteListVar.add("Favourite food: Curry");
-noteListVar.add("Favourite drink: Petrol");
-var noteListViewVar = new noteListView(noteListVar);
-var test = new noteController(noteListViewVar);
+// var noteListVar = new NoteList();
+// noteListVar.add("Favourite food: Curry");
+// noteListVar.add("Favourite drink: Petrol");
+// var noteListViewVar = new noteListView(noteListVar);
+// var test = new noteController(noteListViewVar);
 
-test.view();
+// noteControllerTest.testView();
 
 noteControllerTest.testNoteController();
 // noteControllerTest.testInnerHtml();
