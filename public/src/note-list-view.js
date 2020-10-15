@@ -22,7 +22,7 @@ class noteListView {
         notes[index].id +
         '">' +
         notes[index].text.substring(0, 20) +
-        "</a></div></li>";
+        '</a><div id="' + notes[index].id + '"></div></div></li>';
     }
     if (index == noteLength) {
       htmlString += "</ul>";

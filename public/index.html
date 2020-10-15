@@ -14,5 +14,22 @@
     <script src="./src/note-list-view.js"></script>
     <script src="./src/note-controller.js"></script>
     <script src="./src/single-note-view.js"></script>
+    <script type="text/javascript">
+     
+
+      getNoteID = function() {
+        var href = window.location.href
+        console.log(href.split('#notes/')[1])
+      return href.split('#notes/')[1]
+      }
+
+      addNoteHTML = function() {
+        const myDiv = document.getElementById(Number(getNoteID()))
+        myDiv.innerHTML = controller.noteFinder(Number(getNoteID()))
+      }
+      
+      window.addEventListener("hashchange", addNoteHTML() )
+
+    </script>
   </body>
 </html>
