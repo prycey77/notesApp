@@ -18,17 +18,21 @@
      
 
       getNoteID = function() {
-        var href = window.location.href
+        var href = window.location.hash
         console.log(href.split('#notes/')[1])
       return href.split('#notes/')[1]
       }
 
       addNoteHTML = function() {
+        if(!window.location.hash){
+
+        }else{
         const myDiv = document.getElementById(Number(getNoteID()))
-        myDiv.innerHTML = controller.noteFinder(Number(getNoteID()))
+        myDiv.innerHTML = controller.noteFinder(Number(getNoteID()))}
       }
       
-      window.addEventListener("hashchange", addNoteHTML() )
+      window.addEventListener("hashchange", function() {console.log(getNoteID() + " " + controller.noteFinder())} )
+      window.addEventListener("hashchange", function() {addNoteHTML()} )
 
     </script>
   </body>

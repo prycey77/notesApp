@@ -12,8 +12,9 @@ class noteController {
     element.innerHTML = this.notelistView.output();
   }
   noteFinder(id) {
-   // this.notelistView.noteList.noteList.reduce(a => a.id == id)
-     return this.notelistView.noteList.noteList.filter(a => a.id == id)[0].text
+   console.log(this.notelistModel.noteList.reduce(function(note){return note.id == id}))
+     return this.notelistModel.noteList.reduce(function(note){return note.id == id}).text //.filter(a => a.id != 1).text
+     //this.notelistView.noteList.noteList.filter(a => a.id == id).text
   } 
   // view() {
   //   return this.notelistView.output()
