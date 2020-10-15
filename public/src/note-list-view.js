@@ -16,7 +16,7 @@ class noteListView {
     var noteLength = notes.length;
 
     for (var index = 0; index < noteLength; index++) {
-      htmlString += "<li><div>" + notes[index] + "</div></li>";
+      htmlString += "<li><div>" + notes[index].substring(0, 20) + "</div></li>";
     }
     if (index == noteLength) {
       htmlString += "</ul>";

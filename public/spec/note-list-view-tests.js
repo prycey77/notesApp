@@ -9,8 +9,9 @@ class NoteListViewTest {
     assert.isTrue(
       "NoteListHtml outputs correctly",
       noteListViewVar.output() ==
-        "<ul><li><div>Favourite food: pesto</div></li><li><div>Favourite drink: seltzer</div></li></ul>"
+        "<ul><li><div>Favourite food: pest</div></li><li><div>Favourite drink: sel</div></li></ul>"
     );
   }
+  static testUpToTwenty;
 }
 NoteListViewTest.testHtmlOutput();

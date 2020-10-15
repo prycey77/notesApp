@@ -4,6 +4,6 @@ class SingleNoteView {
   }
 
   returnHtml() {
-    return `<div> ${this.note} </div>`;
+    return `<div>${this.note.text}</div>`;
   }
 }
