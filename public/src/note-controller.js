@@ -23,6 +23,6 @@ class noteController {
   // }
 }
 
-// var listmodel = new NoteList();
-// var controller = new noteController(listmodel);
-// controller.view();
+var listmodel = new NoteList();
+var controller = new noteController(listmodel);
+controller.view();
