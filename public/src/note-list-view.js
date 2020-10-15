@@ -11,8 +11,8 @@ class noteListView {
 
   output() {
     var htmlString = "<ul>";
-    console.log(this.returnNoteList());
-    console.log(this.returnNoteList().length);
+    // console.log(this.returnNoteList());
+    // console.log(this.returnNoteList().length);
     var notes = this.returnNoteList();
     var noteLength = notes.length;
 
