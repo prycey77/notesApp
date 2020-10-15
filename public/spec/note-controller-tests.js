@@ -10,7 +10,7 @@ class noteControllerTest {
 
     var controller = new noteController(notelistmodel);
 
-    assert.isTrue(
+  return  assert.isTrue(
       "noteController can be instantiated",
       controller instanceof noteController
     );

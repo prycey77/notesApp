@@ -1,0 +1,5 @@
+ runSpec(noteListTest)
+ runSpec(noteControllerTest)
+ runSpec(noteTests)
+ runSpec(SingleNoteViewTest)
+ runSpec(NoteListViewTest)

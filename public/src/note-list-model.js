@@ -7,11 +7,13 @@ class NoteList {
     var notes = this.noteList;
 
     for (var index = 0; index <= notes.length; index++) {
-      return notes[index];
+      //return 
+      console.log(notes[index])
     }
   }
 
-  add(note) {
-    this.noteList.push(note);
+  add(noteString) {
+    
+    this.noteList.push(new Note(noteString));
   }
 }
