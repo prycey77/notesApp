@@ -30,3 +30,4 @@ var listmodel = new NoteList();
 var controller = new noteController(listmodel);
 controller.view();
 // controller.noteFinder(1)
+ 
