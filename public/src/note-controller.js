@@ -3,7 +3,8 @@ class noteController {
 
   constructor(noteListModel) {
     this.notelistModel = noteListModel;
-    this.notelistModel.add("This is a note");
+    // this.notelistModel.add("This is a note");
+
     this.notelistView = new noteListView(this.notelistModel);
   }
 
@@ -28,20 +29,19 @@ class noteController {
       e.preventDefault();
 
       this.addNoteFunc(e.target.elements[0].value);
+      this.insertHtml();
+      document.getElementById("text").reset();
     });
-
-    //   function preventMethod(event) {
-    //     event.preventDefault();
-
-    //     console.log(event.target.elements[0].value);
-    //     addNoteFunc(event.target.elements[0].value);
-    //   }
   }
 
   addNoteFunc(note) {
     console.log(note);
     this.notelistModel.add(note);
     console.log(this.notelistModel);
+  }
+  insertHtml() {
+    var element = document.getElementById("app");
+    element.innerHTML = this.notelistView.output();
   }
 }
 
